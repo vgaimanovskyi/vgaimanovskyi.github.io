@@ -3,12 +3,7 @@
     <h1 class="page__caption">Contact<span>channel</span></h1>
     <div class="contact" id="fild">
       <div class="space-ship"></div>
-      <form
-        action="../assets/php/mail.php"
-        method="POST"
-        class="form"
-        @submit.prevent="submit"
-      >
+      <form class="form" @submit.prevent="submit">
         <div class="row">
           <div class="col-6">
             <input
@@ -53,6 +48,7 @@
             <button type="submit">
               {{ "contactPageSubmit" | localize }}
             </button>
+            <div class="status" v-if="status">{{ status }}</div>
           </div>
         </div>
       </form>
@@ -61,6 +57,8 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
+
 export default {
   metaInfo: {
     title: "Contact",
@@ -70,16 +68,31 @@ export default {
       name: "",
       email: "",
       text: "",
+      status: null,
     };
   },
   methods: {
-    submit() {
-      console.log(this.name);
-      console.log(this.email);
-      console.log(this.text);
-      this.name = "";
-      this.email = "";
-      this.text = "";
+    async submit(e) {
+      await emailjs
+        .sendForm(
+          "service_bjvjqe3",
+          "template_w6h68i6",
+          e.target,
+          "user_SdWzoVcDEa1wZz0YnZn3X"
+        )
+        .then(
+          (result) => {
+            this.status = "SUCCESS!";
+            console.log("SUCCESS!", result.status, result.text);
+            this.name = "";
+            this.email = "";
+            this.text = "";
+          },
+          (error) => {
+            this.status = "FAILED...";
+            console.log("FAILED...", error);
+          }
+        );
     },
     stars() {
       const count = 100;
@@ -195,7 +208,16 @@ export default {
     }
   }
 }
-
+.status {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #000;
+  padding: 7px 35px;
+  background-color: #45f3ff;
+}
 .space-ship {
   width: 100px;
   height: 100px;
