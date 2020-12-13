@@ -15,12 +15,19 @@
       <div class="info" v-show="info">
         <div class="info__btn" @click="info = false"></div>
         <h3 class="info__name">{{ selected.name }}</h3>
-        <ul class="info__list">
-          <li v-for="item in selected.description" :key="item.index">
+        <ul class="info__list" v-if="language === 'ru'">
+          <li v-for="item in selected.description.ru" :key="item.index">
             {{ item }};
           </li>
         </ul>
-        <a :href="selected.link" class="info__link" target="_blank">Перейти</a>
+        <ul class="info__list" v-else>
+          <li v-for="item in selected.description.en" :key="item.index">
+            {{ item }};
+          </li>
+        </ul>
+        <a :href="selected.link" class="info__link" target="_blank">
+          {{ "portfolioPageLink" | localize }}
+        </a>
       </div>
       <carousel
         class="carousel"
@@ -60,100 +67,25 @@ export default {
   },
   data() {
     return {
-      portfolio: [
-        {
-          name: "Thread-Master",
-          link: "https://vgaimanovskyi.github.io/thread-master/",
-          description: [
-            "Сайт реализован как SPA на Vue JS",
-            "Сделан адаптив и кроссбраузерность (IE11)",
-            "Контент хранится на Firebase",
-            "Использована SVG-анимация",
-          ],
-        },
-        {
-          name: "SpaceX",
-          link: "https://vgaimanovskyi.github.io/project/index.html",
-          description: [
-            "Реализован на Vue JS",
-            "Сделан адаптив и кроссбраузерность",
-            "Использована анимация",
-          ],
-        },
-        {
-          name: "CBD",
-          link: "https://vgaimanovskyi.github.io/47-Exam/index.html",
-          description: [
-            "Landing page",
-            "Написан по БЭМ",
-            "Сделан адаптив и кроссбраузерность",
-            "Использован jQuery",
-          ],
-        },
-        {
-          name: "Daisy",
-          link: "https://vgaimanovskyi.github.io/practice-Daisy/index.html",
-          description: [
-            "Landing page",
-            "Написан по БЭМ",
-            "Сделан адаптив и кроссбраузерность",
-          ],
-        },
-        {
-          name: "Design-LAB",
-          link: "https://vgaimanovskyi.github.io/15-2-Homework/index.html",
-          description: [
-            "Landing page",
-            "Написан по БЭМ",
-            "Сделан адаптив и кроссбраузерность",
-          ],
-        },
-        {
-          name: "BHROMAON",
-          link: "https://vgaimanovskyi.github.io/21-1-Homework/dist/index.html",
-          description: [
-            "Landing page",
-            "Написан по БЭМ",
-            "Сделан адаптив и кроссбраузерность",
-          ],
-        },
-        {
-          name: "Monticello",
-          link: "https://vgaimanovskyi.github.io/36-exam/index.html",
-          description: [
-            "Landing page",
-            "Написан по БЭМ",
-            "Сделан адаптив и кроссбраузерность",
-            "Использован jQuery",
-          ],
-        },
-        {
-          name: "Cahee",
-          link: "https://vgaimanovskyi.github.io/13-1-Homework/index.html",
-          description: [
-            "Landing page",
-            "Написан по БЭМ",
-            "Сделан адаптив и кроссбраузерность",
-          ],
-        },
-      ],
-      selected: {
-        name: "Thread-Master",
-        link: "https://vgaimanovskyi.github.io/thread-master/",
-        description: [
-          "Сайт реализован как SPA на Vue JS",
-          "Сделан адаптив и кроссбраузерность (IE11)",
-          "Контент хранится на Firebase",
-          "Использована SVG-анимация",
-        ],
-      },
+      selected: null,
       info: false,
     };
+  },
+  computed: {
+    language() {
+      return this.$store.getters.getLanguage;
+    },
+    portfolio() {
+      return this.$store.getters.getPortfolio;
+    },
   },
   methods: {
     selectProject(name) {
       this.selected = this.portfolio.find((project) => project.name === name);
     },
+  },
+  created() {
+    this.selectProject("Thread-Master");
   },
 };
 </script>
@@ -217,6 +149,8 @@ export default {
   }
   &__link {
     display: inline-block;
+    min-width: 90px;
+    box-sizing: border-box;
     padding: 8px 20px;
     background-color: #2196f3;
     border-radius: 20px;

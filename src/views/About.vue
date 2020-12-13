@@ -62,7 +62,10 @@
             <p>
               <span class="animate animate-11">
                 {{ "aboutPageP4-1" | localize }}
-                <a :href="language === 'ru' ? ruCV : enCV" class="colored"
+                <a
+                  :href="language === 'ru' ? ruCV : enCV"
+                  target="_blank"
+                  class="colored"
                   >PDF</a
                 >,
               </span>

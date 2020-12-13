@@ -23,6 +23,8 @@ const locale = {
     "contactPageName": "Имя",
     "contactPageTextarea": "Сообщение",
     "contactPageSubmit": "Отправить",
+
+    "portfolioPageLink": "Перейти",
   },
   "en": {
     "textLine": 'If you need a responsible, hard-working specialist who is ready to work hard and to learn much, then pay attention to me.',
@@ -46,6 +48,8 @@ const locale = {
     "contactPageName": "Name",
     "contactPageTextarea": "Message",
     "contactPageSubmit": "Send",
+
+    "portfolioPageLink": "Go",
   }
 }
 
