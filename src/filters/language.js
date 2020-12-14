@@ -2,6 +2,11 @@ import store from "../store";
 
 const locale = {
   "ru": {
+    "stickyPower": 'Включите (кнопка "Power")',
+    "stickyChannel": "Переключайте каналы",
+    "stickyValume": "Настройте качество",
+    "stickyLanguage": "Поменяйте язык",
+
     "textLine": 'Если Вам нужен ответственный, работоспособный специалист, который готов много и усердно работать, то обратите на меня внимание.',
 
     "aboutPageHello": "Привет",
@@ -27,6 +32,11 @@ const locale = {
     "portfolioPageLink": "Перейти",
   },
   "en": {
+    "stickyPower": 'Turn on ("Power" button)',
+    "stickyChannel": "Switch channels",
+    "stickyValume": "Adjust signal quality",
+    "stickyLanguage": "Change the language",
+
     "textLine": 'If you need a responsible, hard-working specialist who is ready to work hard and to learn much, then pay attention to me.',
 
     "aboutPageHello": "Hello",

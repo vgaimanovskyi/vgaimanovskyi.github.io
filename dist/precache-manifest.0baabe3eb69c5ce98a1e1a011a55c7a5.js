@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d64ce87e8347abfc15c7",
-    "url": "/css/app.4011a564.css"
+    "revision": "10520d60cc2cf255a67f",
+    "url": "/css/app.30ec97d2.css"
   },
   {
     "revision": "11569faa6e1e18763097",
@@ -192,6 +192,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/ship06a.2f9d277b.png"
   },
   {
+    "revision": "390c83f3cc2ed296202d757737b8587f",
+    "url": "/img/sticky.390c83f3.png"
+  },
+  {
     "revision": "d91b600ff3ca88ab7bb084c61646973c",
     "url": "/img/telegram.d91b600f.svg"
   },
@@ -204,12 +208,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/webpack.837b970d.svg"
   },
   {
-    "revision": "11c432317a0c29553899f3dfd09fbead",
+    "revision": "8091d261142adc589b39236632f97f62",
     "url": "/index.html"
   },
   {
-    "revision": "d64ce87e8347abfc15c7",
-    "url": "/js/app.79dd9880.js"
+    "revision": "10520d60cc2cf255a67f",
+    "url": "/js/app.1332940a.js"
   },
   {
     "revision": "11569faa6e1e18763097",

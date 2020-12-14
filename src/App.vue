@@ -6,6 +6,28 @@
       :style="{ transform: 'translate(-50%, -4%) scale(' + scale + ')' }"
     >
       <div class="antenna"></div>
+      <ol class="sticky">
+        <li>
+          <span :class="{ done: sticky.powerDone }">
+            {{ "stickyPower" | localize }}
+          </span>
+        </li>
+        <li>
+          <span :class="{ done: sticky.channelDone }">
+            {{ "stickyChannel" | localize }}
+          </span>
+        </li>
+        <li>
+          <span :class="{ done: sticky.valumeDone }">
+            {{ "stickyValume" | localize }}
+          </span>
+        </li>
+        <li>
+          <span :class="{ done: sticky.languageDone }">
+            {{ "stickyLanguage" | localize }}
+          </span>
+        </li>
+      </ol>
       <main>
         <div class="error-noise">
           <div
@@ -134,6 +156,12 @@ export default {
       valume: 0,
       isRuLang: true,
       showTextLine: false,
+      sticky: {
+        powerDone: false,
+        channelDone: false,
+        valumeDone: false,
+        languageDone: false,
+      },
     };
   },
   computed: {
@@ -161,14 +189,23 @@ export default {
         this.$router.push("/");
       }
       this.power = !this.power;
+      this.sticky.powerDone = true;
     },
     langToggle() {
       this.$store.commit("langToggle", this.isRuLang);
+      this.sticky.languageDone = true;
     },
   },
-  // beforeCreate() {
-  //   this.$router.push("/");
-  // }
+  watch: {
+    $route(to) {
+      if (to !== "/") {
+        this.sticky.channelDone = true;
+      }
+    },
+    valume() {
+      this.sticky.valumeDone = this.valume == 5;
+    },
+  },
 };
 </script>
 <style lang="scss">

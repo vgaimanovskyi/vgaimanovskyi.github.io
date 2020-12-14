@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-@import '_variables';
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 @import '_reset';
 
 body {
@@ -83,7 +83,50 @@ body {
     transform: perspective(200px) rotateX(20deg) translateY(65px) translateZ(-50px);
   }
 }
+.sticky {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 260px;
+  height: 260px;
+  padding: 40px 15px 45px 45px;
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url('~@/assets/images/sticky.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 
+  & li {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #000080;
+    margin-top: 10px;
+
+    & span {
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 0;
+        left: -2px;
+        display: block;
+        height: 2px;
+        background-color: red;
+        transition-duration: 0.3s;
+      }
+      &.done::before {
+        width: 105%;
+      }
+    }
+    // &.done
+  }
+}
 .antenna {
   position: absolute;
   width: 200px;
