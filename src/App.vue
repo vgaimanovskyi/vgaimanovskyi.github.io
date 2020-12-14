@@ -3,7 +3,9 @@
     <Clock></Clock>
     <div
       class="tv-box"
-      :style="{ transform: 'translate(-50%, -4%) scale(' + scale + ')' }"
+      :style="{
+        transform: 'translate(-50%, -' + translateY + '%) scale(' + scale + ')',
+      }"
     >
       <div class="antenna"></div>
       <ol class="sticky">
@@ -168,8 +170,25 @@ export default {
     scale() {
       if (window.innerWidth >= 1300) {
         return 1;
+      } else if (window.innerWidth >= 992) {
+        return 0.8;
+      } else if (window.innerWidth >= 768) {
+        return 0.6;
+      } else if (window.innerWidth >= 620) {
+        return 0.5;
+      } else if (window.innerWidth >= 500) {
+        return 0.4;
+      } else if (window.innerWidth >= 370) {
+        return 0.3;
       } else {
-        return (window.innerWidth - 300) / 1000;
+        return 0.25;
+      }
+    },
+    translateY() {
+      if (window.innerWidth >= 620) {
+        return 4;
+      } else {
+        return 2;
       }
     },
     language() {

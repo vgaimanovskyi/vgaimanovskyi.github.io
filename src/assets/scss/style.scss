@@ -6,13 +6,14 @@ body {
   background: url('~@/assets/images/bg-wall.jpg');
   background-size: 400px;
   box-shadow: 0 8px 10px rgba(0,0,0,0.8);
-  overflow: hidden;
 
   &::before {
-    position: fixed;
+    position: absolute;
     content: '';
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(to left,rgba(0,0,0,0.6) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.6) 100%), radial-gradient(transparent 50%, rgba(0,0,0,0.2));
     z-index: 1;
   }
@@ -20,6 +21,8 @@ body {
 #app {
   width: 100%;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 .page {
   /* display: flex;
@@ -625,6 +628,10 @@ footer {
   background-color: red;
   z-index: 1;
 
+  @media screen and (max-width: 1024px) {
+    font-size: 18px;
+    font-weight: 300;
+  }
   &__text {
     display: inline-block;
     white-space: nowrap;
