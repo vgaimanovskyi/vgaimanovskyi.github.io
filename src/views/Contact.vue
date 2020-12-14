@@ -118,10 +118,8 @@ export default {
       }
     },
   },
-  created() {
-    setTimeout(() => {
-      this.stars();
-    }, 0);
+  mounted() {
+    this.stars();
   },
 };
 </script>

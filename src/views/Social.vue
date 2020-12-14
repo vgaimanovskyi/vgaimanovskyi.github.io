@@ -143,15 +143,20 @@ export default {
 @keyframes marioMove {
   45% {
     bottom: 100px;
+    background-image: url("~@/assets/images/social/mario.gif");
+  }
+  46% {
+    background-image: url("~@/assets/images/social/mario-jump.png");
   }
   48% {
     bottom: 200px;
+    background-image: url("~@/assets/images/social/mario-jump.png");
+  }
+  54% {
+    background-image: url("~@/assets/images/social/mario-jump.png");
   }
   55% {
     bottom: 100px;
-    background-image: url("~@/assets/images/social/mario-jump.png");
-  }
-  60% {
     background-image: url("~@/assets/images/social/mario.gif");
   }
   100% {
