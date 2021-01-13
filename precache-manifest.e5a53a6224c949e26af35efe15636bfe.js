@@ -1,15 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ade8c63d8cabcc1c5395",
+    "revision": "aa7a9ffe634df71e705e",
     "url": "/css/app.b4b7de1c.css"
   },
   {
     "revision": "11569faa6e1e18763097",
     "url": "/css/chunk-17f63fc8.991bdf79.css"
-  },
-  {
-    "revision": "03b2a3d301e3ef41288b",
-    "url": "/css/chunk-3afa87dd.991b865a.css"
   },
   {
     "revision": "edc10bbd376695580b8e",
@@ -22,6 +18,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "36cd12eb612fd6f9d435",
     "url": "/css/chunk-644343f4.c5223a7f.css"
+  },
+  {
+    "revision": "54cbfe8402a84f220318",
+    "url": "/css/chunk-ff02e9a0.e0bb32b2.css"
   },
   {
     "revision": "30e680fcf5d1de45611501d99e2403e4",
@@ -120,6 +120,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/Thread-Master.be75a38f.jpg"
   },
   {
+    "revision": "27a7218bbfb3fb81bf093566635108c3",
+    "url": "/img/Weather-App.27a7218b.jpg"
+  },
+  {
+    "revision": "75d0e0a8dec92dccb2e0b07e58e0092c",
+    "url": "/img/Weather-App.75d0e0a8.jpg"
+  },
+  {
+    "revision": "f27134805f21a29999ef4bc8ce46ecdc",
+    "url": "/img/Weather-App.f2713480.jpg"
+  },
+  {
     "revision": "6b1471715261a259ab0bb67afc136678",
     "url": "/img/bg-desk.6b147171.jpg"
   },
@@ -208,20 +220,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/webpack.837b970d.svg"
   },
   {
-    "revision": "f89a64ae96e46b46065c447304730eae",
+    "revision": "4b32599f345e0160926049a74283a849",
     "url": "/index.html"
   },
   {
-    "revision": "ade8c63d8cabcc1c5395",
-    "url": "/js/app.514a7b71.js"
+    "revision": "aa7a9ffe634df71e705e",
+    "url": "/js/app.cc067749.js"
   },
   {
     "revision": "11569faa6e1e18763097",
     "url": "/js/chunk-17f63fc8.9fb7fcff.js"
-  },
-  {
-    "revision": "03b2a3d301e3ef41288b",
-    "url": "/js/chunk-3afa87dd.46d4983a.js"
   },
   {
     "revision": "edc10bbd376695580b8e",
@@ -234,6 +242,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "36cd12eb612fd6f9d435",
     "url": "/js/chunk-644343f4.6b16f63f.js"
+  },
+  {
+    "revision": "54cbfe8402a84f220318",
+    "url": "/js/chunk-ff02e9a0.69dc1966.js"
   },
   {
     "revision": "4caa9bc050920e9b4552",
