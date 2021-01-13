@@ -92,7 +92,7 @@ export default {
 
 <style lang="scss" scoped>
 .portfolio {
-  background-position: center;
+  background-position: center -50px;
   background-size: cover;
   padding: 25px;
   width: 100%;
@@ -199,9 +199,9 @@ export default {
 }
 .carousel {
   position: absolute;
-  left: 50%;
+  left: 50px;
+  right: 50px;
   bottom: 25px;
-  transform: translateX(-50%);
 
   &__img {
     display: block;

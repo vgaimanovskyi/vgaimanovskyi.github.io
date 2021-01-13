@@ -12,16 +12,32 @@ export default new Vuex.Store({
         link: "https://vgaimanovskyi.github.io/thread-master/",
         description: {
           ru: [
-            "Сайт реализован как SPA на Vue JS",
+            "Сайт реализован как MPA на Vue JS",
             "Сделан адаптив и кроссбраузерность (IE11)",
             "Контент хранится на Firebase",
             "Использована SVG-анимация",
           ],
           en: [
-            "Built as SPA with Vue JS",
+            "Built as MPA with Vue JS",
             "Adaptive and cross-browser compatible (IE11)",
             "Content is stored on Firebase",
             "SVG animation used",
+          ],
+        },
+      },
+      {
+        name: "Weather-App",
+        link: "https://my-nuxt-weather-app.herokuapp.com/",
+        description: {
+          ru: [
+            "Сайт реализован как PWA на NuxtJS",
+            "Сделан адаптив",
+            "Использованы Vuetify и REST API",
+          ],
+          en: [
+            "Built as PWA with NuxtJS",
+            "Adaptive",
+            "Used Vuetify and REST API",
           ],
         },
       },
