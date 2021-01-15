@@ -97,7 +97,9 @@ export default {
       ruCV:
         "https://drive.google.com/file/d/1hCy7YYqwSO6wYcIyOK05njGSE5ftlahd/view?usp=sharing",
       enCV:
-        "https://drive.google.com/file/d/1hTu01SF6qtA1HkLINVhVpUSxXRmEihXL/view?usp=sharing",
+        "https://drive.google.com/file/d/1B-6MeIre3RYdy29h_-rNMjklWTRXi_YI/view?usp=sharing",
+      // enCV:
+      //   "https://drive.google.com/file/d/1hTu01SF6qtA1HkLINVhVpUSxXRmEihXL/view?usp=sharing",
     };
   },
   computed: {

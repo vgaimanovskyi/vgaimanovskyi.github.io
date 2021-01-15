@@ -42,6 +42,24 @@ export default new Vuex.Store({
         },
       },
       {
+        name: "Rizor",
+        link: "https://vgaimanovskyi.github.io/gsap-practice/",
+        description: {
+          ru: [
+            "Landing page",
+            "Написан по БЭМ",
+            "Для анимации использован GSAP",
+            "Сделан адаптив",
+          ],
+          en: [
+            "Landing page",
+            "Used BEM methodology",
+            "Animated with GSAP",
+            "Adaptive",
+          ],
+        },
+      },
+      {
         name: "SpaceX",
         link: "https://vgaimanovskyi.github.io/project/index.html",
         description: {
