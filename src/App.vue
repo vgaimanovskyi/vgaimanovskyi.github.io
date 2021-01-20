@@ -7,6 +7,7 @@
         transform: 'translate(-50%, -' + translateY + '%) scale(' + scale + ')',
       }"
     >
+      <!--  -->
       <div class="antenna"></div>
       <ol class="sticky">
         <li>
@@ -168,12 +169,27 @@ export default {
   },
   computed: {
     scale() {
-      if (window.innerWidth >= 1300) {
+      // if (window.innerWidth > 1366) {
+      //   return 1;
+      // } else if (window.innerWidth >= 992) {
+      //   return 0.7;
+      // } else if (window.innerWidth >= 768) {
+      //   return 0.6;
+      // } else if (window.innerWidth >= 620) {
+      //   return 0.5;
+      // } else if (window.innerWidth >= 500) {
+      //   return 0.4;
+      // } else if (window.innerWidth >= 370) {
+      //   return 0.3;
+      // } else {
+      //   return 0.25;
+      // }
+      if (window.innerHeight > 900) {
         return 1;
-      } else if (window.innerWidth >= 992) {
-        return 0.8;
-      } else if (window.innerWidth >= 768) {
-        return 0.6;
+      } else if (window.innerHeight > 768) {
+        return 0.85;
+      } else if (window.innerHeight >= 600) {
+        return 0.65;
       } else if (window.innerWidth >= 620) {
         return 0.5;
       } else if (window.innerWidth >= 500) {
@@ -224,6 +240,9 @@ export default {
     valume() {
       this.sticky.valumeDone = this.valume == 5;
     },
+  },
+  created() {
+    console.log(innerHeight);
   },
 };
 </script>
